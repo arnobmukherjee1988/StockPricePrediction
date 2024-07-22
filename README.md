@@ -40,32 +40,23 @@ The data is collected for the period from January 1, 2010, to January 1, 2023.
 
 1. **Daily Returns**: 
 
-   $
-   \text{Daily Return} = \frac{\text{Adj Close}_t - \text{Adj Close}_{t-1}}{\text{Adj Close}_{t-1}}
-   $
-   $x + y$
+   $\text{Daily Return} = \frac{\text{Adj Close}_t - \text{Adj Close}_{t-1}}{\text{Adj Close}_{t-1}}$
 
 3. **Moving Averages**:
    - 20-day Moving Average (MA20):
 
-     \[
-     \text{MA20} = \frac{1}{20} \sum_{i=0}^{19} \text{Adj Close}_{t-i}
-     \]
+     $\text{MA20} = \frac{1}{20} \sum_{i=0}^{19} \text{Adj Close}_{t-i}$
 
    - 50-day Moving Average (MA50):
 
-     \[
-     \text{MA50} = \frac{1}{50} \sum_{i=0}^{49} \text{Adj Close}_{t-i}
-     \]
+     $\text{MA50} = \frac{1}{50} \sum_{i=0}^{49} \text{Adj Close}_{t-i}$
 
 4. **Volatility**:
    - 20-day Volatility (standard deviation of daily returns):
 
-     \[
-     \text{Volatility}_{20} = \sqrt{\frac{1}{20} \sum_{i=0}^{19} (\text{Daily Return}_{t-i} - \bar{r})^2}
-     \]
+     $\text{Volatility}_{20} = \sqrt{\frac{1}{20} \sum_{i=0}^{19} (\text{Daily Return}_{t-i} - \bar{r})^2}$
 
-     where \( \bar{r} \) is the mean daily return over the past 20 days.
+     where  $\bar{r}$ is the mean daily return over the past 20 days.
 
 
 ## Data Collection Script
