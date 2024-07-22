@@ -8,6 +8,7 @@ This project aims to predict stock prices by combining historical market data wi
 
 ## Project Structure
 StockPricePrediction/
+
 ├── data/ # Directory to store raw and enhanced data files
 ├── notebooks/ # Jupyter notebooks for data collection and analysis
 ├── scripts/ # Python scripts for data processing
