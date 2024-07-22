@@ -43,8 +43,9 @@ The data is collected for the period from January 1, 2010, to January 1, 2023.
    $
    \text{Daily Return} = \frac{\text{Adj Close}_t - \text{Adj Close}_{t-1}}{\text{Adj Close}_{t-1}}
    $
+   $x + y$
 
-2. **Moving Averages**:
+3. **Moving Averages**:
    - 20-day Moving Average (MA20):
 
      \[
@@ -57,7 +58,7 @@ The data is collected for the period from January 1, 2010, to January 1, 2023.
      \text{MA50} = \frac{1}{50} \sum_{i=0}^{49} \text{Adj Close}_{t-i}
      \]
 
-3. **Volatility**:
+4. **Volatility**:
    - 20-day Volatility (standard deviation of daily returns):
 
      \[
