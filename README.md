@@ -38,25 +38,25 @@ The data is collected for the period from January 1, 2010, to January 1, 2023.
 
 ### Data Processing
 
-1. **Daily Returns**: 
+Sure, here are the equations rewritten using more mathematical symbols:
 
-   $\text{Daily Return} = \frac{\text{Adj Close}_t - \text{Adj Close}_{t-1}}{\text{Adj Close}_{t-1}}$
+1. **Daily Returns**:
+   $R_t = \frac{P_t - P_{t-1}}{P_{t-1}}$
 
-3. **Moving Averages**:
+   where $R_t$ is the daily return, $P_t$ is the adjusted closing price at time $t$, and $P_{t-1}$ is the adjusted closing price at time $t-1$.
+
+2. **Moving Averages**:
    - 20-day Moving Average (MA20):
-
-     $\text{MA20} = \frac{1}{20} \sum_{i=0}^{19} \text{Adj Close}_{t-i}$
+     $MA_{20} = \frac{1}{20} \sum_{i=0}^{19} P_{t-i}$
 
    - 50-day Moving Average (MA50):
+     $MA_{50} = \frac{1}{50} \sum_{i=0}^{49} P_{t-i}$
 
-     $\text{MA50} = \frac{1}{50} \sum_{i=0}^{49} \text{Adj Close}_{t-i}$
-
-4. **Volatility**:
+3. **Volatility**:
    - 20-day Volatility (standard deviation of daily returns):
+     $\sigma_{20} = \sqrt{\frac{1}{20} \sum_{i=0}^{19} (R_{t-i} - \mu)^2}$
 
-     $\text{Volatility}_{20} = \sqrt{\frac{1}{20} \sum_{i=0}^{19} (\text{Daily Return}_{t-i} - \bar{r})^2}$
-
-     where  $\bar{r}$ is the mean daily return over the past 20 days.
+     where $\sigma_{20}$ is the 20-day volatility, $R_{t-i}$ is the daily return at time $t-i$, and $\mu$ is the mean daily return over the past 20 days.
 
 
 ## Data Collection Script
