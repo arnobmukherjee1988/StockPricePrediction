@@ -73,6 +73,23 @@ def add_features(df):
   
   # Calculate the 50-day moving average of the adjusted close price
   df['MA50'] = df['Adj Close'].rolling(window=50).mean()
+
+  # Exponential Moving Averages
+  df['EMA20'] = df['Close'].ewm(span=20, adjust=False).mean()
+  df['EMA50'] = df['Close'].ewm(span=50, adjust=False).mean()
+
+  # Relative Strength Index (RSI)
+  delta = df['Close'].diff(1)
+  gain = delta.where(delta > 0, 0)
+  loss = -delta.where(delta < 0, 0)
+  avg_gain = gain.rolling(window=14).mean()
+  avg_loss = loss.rolling(window=14).mean()
+  rs = avg_gain / avg_loss
+  df['RSI'] = 100 - (100 / (1 + rs))
+
+  # Moving Average Convergence Divergence (MACD)
+  df['MACD'] = df['EMA20'] - df['EMA50']
+  df['Signal Line'] = df['MACD'].ewm(span=9, adjust=False).mean()
   
   # Calculate the volatility (standard deviation of daily returns) over a 20-day window
   df['Volatility'] = df['Daily Return'].rolling(window=20).std()
