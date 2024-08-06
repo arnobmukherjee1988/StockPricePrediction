@@ -1,6 +1,4 @@
-# StockPricePrediction
-
-# Stock Price Prediction using Monte Carlo Simulations and Machine Learning
+# Stock Price Analysis Using EDA and Predictive Machine Learning Models
 
 ## Project Overview
 
